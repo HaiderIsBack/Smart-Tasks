@@ -358,3 +358,9 @@ section {
         }
     }
 }
+
+.credits {
+    text-align: right;
+    margin: 1rem auto;
+    font-family: var(--font-family);
+}
