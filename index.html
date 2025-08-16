@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=drag_indicator" />
+    <link rel="stylesheet" href="style.css">
+    <title>Smart Tasks</title>
+</head>
+<body class="dark-mode">
+    <section class="header">
+        <h1>August 2025</h1>
+        <menu>
+            <li><a href="#" id="import-btn">Import</a></li>
+            <li><a href="#" id="export-btn">Export</a></li>
+            <li><button onclick="toggleThemeMode()">Dark Mode</button></li>
+        </menu>
+    </section>
+
+    <section class="legend">
+        <ul>
+            <li>
+                <span class="item-color item-color-task"></span>
+                <span class="item-text">Task</span>
+            </li>
+            <li>
+                <span class="item-color item-color-event"></span>
+                <span class="item-text">Event</span>
+            </li>
+            <li>
+                <span class="item-color item-color-meeting"></span>
+                <span class="item-text">Meeting</span>
+            </li>
+            <li>
+                <span class="item-color item-color-birthday"></span>
+                <span class="item-text">Birthday</span>
+            </li>
+            <li>
+                <span class="item-color item-color-interview"></span>
+                <span class="item-text">Interview</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="calender">
+        <div class="weekday-tasks">
+            <h2 class="day">Mon, 01</h2>
+            <div class="task-list">
+                <div class="task-item">
+                    <div class="entry">
+                        <span class="material-symbols-outlined">drag_indicator</span>
+                        <span class="item-color item-color-task"></span>
+                        <p>Perform a backflip</p>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <div class="entry">
+                        <span class="material-symbols-outlined">drag_indicator</span>
+                        <span class="item-color item-color-meeting"></span>
+                        <p>Company Descision</p>
+                    </div>
+                </div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+            </div>
+        </div>
+        <div class="weekday-tasks">
+            <h2 class="day">Tue, 02</h2>
+            <div class="task-list">
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+            </div>
+        </div>
+        <div class="weekday-tasks">
+            <h2 class="day">Wed, 03</h2>
+            <div class="task-list">
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+            </div>
+        </div>
+        <div class="weekday-tasks">
+            <h2 class="day">Thu, 04</h2>
+            <div class="task-list">
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+            </div>
+        </div>
+        <div class="weekday-tasks">
+            <h2 class="day">Fri, 05</h2>
+            <div class="task-list">
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+            </div>
+        </div>
+        <div class="weekday-tasks">
+            <h2 class="day">Sat, 06</h2>
+            <div class="task-list">
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+            </div>
+        </div>
+        <div class="weekday-tasks">
+            <h2 class="day">Sun, 07</h2>
+            <div class="task-list">
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+                <div class="task-item"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="entry-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h3>Entry</h3>
+            <form id="entry-form">
+                <label>
+                    Description:
+                    <input type="text" name="desc" required />
+                </label>
+                <fieldset>
+                    <legend>Type:</legend>
+                    <label><input type="radio" name="type" value="task" checked /> Task</label>
+                    <label><input type="radio" name="type" value="event" /> Event</label>
+                    <label><input type="radio" name="type" value="meeting" /> Meeting</label>
+                    <label><input type="radio" name="type" value="birthday" /> Birthday</label>
+                    <label><input type="radio" name="type" value="interview" /> Interview</label>
+                </fieldset>
+                <div class="modal-actions">
+                    <button type="submit" class="btn-success">Create</button>
+                    <button type="button" id="modal-cancel" class="btn-danger">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
